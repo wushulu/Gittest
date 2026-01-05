@@ -6,34 +6,147 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
   <title>README - Math Preview</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body class="markdown-body">
-<h1 dir="auto" id="git-test-2">git test</h1>
-<h2 dir="auto" id="testing-2">testing</h2>
-<h3 dir="auto" id="picture-test-2">picture test</h3>
-<p dir="auto"><img src="image.png" alt="alt text" data-src="image.png"></p>
-<hr dir="auto">
-<hr dir="auto">
-<p dir="auto"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">...</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.1056em;"></span><span class="mord">...</span></span></span></span>
-<code>math ... </code></p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo></mrow><annotation encoding="application/x-tex">c^2 = </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8641em;"></span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span></span></span></span></span></p>
-<ul dir="auto">
-<li dir="auto"><a href="#git-test">git test</a></li>
-<li dir="auto">
-<ul dir="auto">
-<li dir="auto">
-<p dir="auto"><a href="#testing">testing</a></p>
-<ul dir="auto">
-<li dir="auto"><a href="#picture-test">picture test</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+  <main id="content" class="markdown-body" style="box-sizing: border-box; max-width: 980px; margin: 40px auto; padding: 0 16px;"></main>
+
+  <script type="text/markdown" id="raw-md">
+# git test
+
+## 数学公式（源码 + 渲染）
+
+下面每个示例先给出“源码”（代码块），然后给出渲染结果（即实际可见的公式）。这样你既能看到写法，也能看到渲染效果。
+
+- 行内公式示例
+
+源码：
+```markdown
+Euler: $e^{i\pi}+1=0$
+```
+
+渲染：Euler: $e^{i\pi}+1=0$
+
+- 一元二次方程（块级显示）
+
+源码：
+```markdown
+$$
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+$$
+```
+
+渲染：
+$$
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+$$
+
+- 定积分（块级）
+
+源码：
+```markdown
+$$
+\int_a^b f(x)\\,dx
+$$
+```
+
+渲染：
+$$
+\int_a^b f(x)\\,dx
+$$
+
+- 导数（行内与显示）
+
+源码（行内）：
+```markdown
+This is inline: $f'(x)=\\dfrac{df}{dx}$
+```
+
+渲染（行内）：This is inline: $f'(x)=\\dfrac{df}{dx}$
+
+源码（显示）：
+```markdown
+$$
+f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^n
+$$
+```
+
+渲染（显示）：
+$$
+f(x)=\\sum_{n=0}^{\\infty}\\frac{f^{(n)}(a)}{n!}(x-a)^n
+$$
+
+- 极限与求和
+
+源码：
+```markdown
+$$
+\\lim_{x\\to 0}\\frac{\\sin x}{x}=1
+$$
+
+$$
+\\sum_{k=1}^{n}k=\\frac{n(n+1)}{2},\\qquad \\prod_{k=1}^{n}k=n! 
+$$
+```
+
+渲染：
+$$
+\\lim_{x\\to 0}\\frac{\\sin x}{x}=1
+$$
+
+$$
+\\sum_{k=1}^{n}k=\\frac{n(n+1)}{2},\\qquad \\prod_{k=1}^{n}k=n!
+$$
+
+- 矩阵示例
+
+源码：
+```markdown
+$$
+A=\\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{bmatrix}
+$$
+```
+
+渲染：
+$$
+A=\\begin{bmatrix} a_{11} & a_{12} \\\\ a_{21} & a_{22} \\end{bmatrix}
+$$
+
+- 高斯分布密度函数
+
+源码：
+```markdown
+$$
+\\frac{1}{\\sqrt{2\\pi\\sigma^2}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}
+$$
+```
+
+渲染：
+$$
+\\frac{1}{\\sqrt{2\\pi\\sigma^2}} e^{-\\frac{(x-\\mu)^2}{2\\sigma^2}}
+$$
+
+---
+
+## 使用提示
+
+- 在源码块中使用 `markdown` 或不指定语言都可以，关键是代码块内要展示原始 Markdown 源（包括 `$` 和 `\\`）。
+- 预览公式：按 `Ctrl+Shift+V` 或 `Ctrl+K` 然后 `V`。推荐安装 `Markdown Preview Enhanced` 或 `Markdown+Math` 得到更完整的渲染支持。
+
+  </script>
+
+  <script>
+    (function(){
+      const raw = document.getElementById('raw-md').textContent;
+      const html = marked.parse(raw);
+      document.getElementById('content').innerHTML = html;
+      if (window.MathJax) {
+        MathJax.typesetPromise();
+      }
+    })();
+  </script>
 
 </body>
 </html>
