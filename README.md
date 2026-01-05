@@ -1,13 +1,5 @@
 # git test
 
-## testing
-
-### picture test
-
-![alt text](image.png)
-
----
-
 ## 数学公式（源码 + 渲染）
 
 下面每个示例先给出“源码”（代码块），然后给出渲染结果（即实际可见的公式）。这样你既能看到写法，也能看到渲染效果。
@@ -127,23 +119,5 @@ $$
 - 在源码块中使用 `markdown` 或不指定语言都可以，关键是代码块内要展示原始 Markdown 源（包括 `$` 和 `\`）。
 - 预览公式：按 `Ctrl+Shift+V` 或 `Ctrl+K` 然后 `V`。推荐安装 `Markdown Preview Enhanced` 或 `Markdown+Math` 得到更完整的渲染支持。
 
----
 
-- [git test](#git-test)
-  - [testing](#testing)
-    - [picture test](#picture-test)
-  - [数学公式（源码 + 渲染）](#数学公式源码--渲染)
-  - [使用提示](#使用提示)
-- [git test](#git-test-1)
-  - [testing](#testing-1)
-    - [picture test](#picture-test-1)
-# git test
-
-## testing
-
-### picture test
-
-![alt text](image.png)
-
----
 
